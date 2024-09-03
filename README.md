@@ -1,3 +1,5 @@
+pipeline added 
+
 # Hosting a Full-Stack Application
 
 ### **You can use you own project completed in previous courses or use the provided Udagram app for completing this final project.**
