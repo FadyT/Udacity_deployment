@@ -9,7 +9,7 @@
     "build": "ng build",
     "deploy": "npm install -f && npm run build && chmod +x bin/deploy.sh && bin/deploy.sh",
     "test": "ng test --watch=false",
-    "lint": "npm build && ng lint",
+    "lint": "npm install && ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
