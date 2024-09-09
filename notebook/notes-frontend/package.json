@@ -4,9 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "deploy" : "aws s3 cp --recursive --acl public-read ./build s3://notesbucket1928382/" 
+    "deploy" : "aws s3 cp --recursive --acl public-read ./build s3://notesbucket1234/" 
   },
   "author": "",
   "license": "ISC",
