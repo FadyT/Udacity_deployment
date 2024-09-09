@@ -14,3 +14,4 @@ fetch('http://notes-api-dev.us-east-1.elasticbeanstalk.com/note' ,
       charactersDiv.append(characterElement);
     });
   }
+
