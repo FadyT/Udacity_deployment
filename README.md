@@ -68,3 +68,7 @@ while frontend:deploy runs : "deploy" : "aws s3 cp --recursive --acl public-read
 
 - [Node](https://nodejs.org) - Javascript Runtime
 - [Express](https://expressjs.com/) - Javascript API Framework
+
+
+# project diagram
+https://drive.google.com/file/d/15Z6PoSzje9wJ1JcZ5qbaIP_BYxCbkuB8/view?usp=sharing
