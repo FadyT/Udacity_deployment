@@ -28,7 +28,6 @@ jobs:
       - run:
           name: Install API Dependencies
           command: |
-           echo "TODO: Install dependencies in the the backend API  "
            npm run api:install
   # deploy step will run only after manual approval
   deploy:
@@ -45,13 +44,21 @@ jobs:
           name: Deploy App
           # TODO: Install, build, deploy in both apps
           command: |
-            echo "# TODO: Install, build, deploy in both apps"
             npm run deploy
             
 workflows:
   udagram:
     jobs:
+    jobs:
       - build
-      - deploy:
+      - hold:
+          filters:
+            branches:
+              only:
+                - master
+          type: approval
           requires:
             - build
+      - deploy:
+          requires:
+            - hold
