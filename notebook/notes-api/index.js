@@ -13,6 +13,7 @@ function setCorsHeaders(req, res, next) {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   next();
 }
+app.use(express.json())
 app.use(setCorsHeaders);
 
 const pool = new Pool({
@@ -51,8 +52,8 @@ app.get('/', (req, res) => {
 
 app.post('/note', async (req, res) => {
     // Validate the incoming JSON data
-    const { title, data } = req.body;
     console.log(req.body);
+    const { title, data } = req.body;
     if (!title || !data ) {
       return res.status(400).send('please type title and data.');
     }
