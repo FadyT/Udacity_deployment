@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "deploy" : "bin/deploy.sh"
+    "deploy" : "aws s3 cp --recursive --acl public-read ./build s3://notesbucket1928382/" 
   },
   "author": "",
   "license": "ISC",

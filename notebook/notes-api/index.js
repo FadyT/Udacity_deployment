@@ -1,9 +1,19 @@
 const express = require('express')
+const cors = require('cors')
 const { Pool } = require('pg');
 require('dotenv').config()
 
 const app = express()
 const port = 8080
+
+function setCorsHeaders(req, res, next) {
+  origin:'http://notesbucket3456776543.s3.amazonaws.com/',
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+}
+app.use(setCorsHeaders);
 
 const pool = new Pool({
   user: process.env.POSTGRES_USER,
@@ -13,7 +23,6 @@ const pool = new Pool({
   port: process.env.POSTGRES_PORT // Change this if your PostgreSQL server is running on a different port
 });
   
-  app.use(express.json());
 
   async function createnoteTable() {
     /*
