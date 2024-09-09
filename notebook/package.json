@@ -8,6 +8,6 @@
   "api:start": "cd notes-api && npm start .",
   "api:deploy": "cd notes-api && npm run deploy",
 
-  "deploy": "npm run api:install && npm run frontend:install &&  npm run api:deploy && npm run frontend:deploy"
+  "deploy": "npm run api:install && npm run frontend:install &&  npm run frontend:deploy"
 }
 }
