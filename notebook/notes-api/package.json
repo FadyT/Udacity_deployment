@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "deploy": "eb init && eb list && eb use notes-api-dev && eb deploy"
+    "deploy": "eb list && eb use notes-api-dev && eb deploy"
   },
   "keywords": [],
   "author": "",
